@@ -1,0 +1,13 @@
+cmake_minimum_required(VERSION 2.8)
+project(boxfilter)
+
+set(EXECUTABLE_OUTPUT_PATH ${PROJECT_SOURCE_DIR}/bin)
+set(LIBRARY_OUTPUT_DIRECTORY ${PROJECT_SOURCE_DIR}/bin)
+
+set(CMAKE_CXX_FLAGS "-std=c++14 -w") # -msse4.1
+set(CMAKE_EXE_LINKER_FLAGS "-fPIE -pie")
+set(CMAKE_CXX_FLAGS_DEBUG "-g -O0")
+set(CMAKE_CXX_FLAGS_RELEASE "-O3 -DNDEBUG")
+set(CMAKE_POSITION_INDEPENDENT_CODE ON)
+
+add_subdirectory(src)
